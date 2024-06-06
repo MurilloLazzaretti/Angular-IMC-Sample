@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-card class="imc-card">
+    <mat-card-header>Cálculo de IMC</mat-card-header>
+    <mat-card-content>
+      <div class="content">
+        <mat-form-field class="example-form-field">
+          <mat-label>Altura</mat-label>
+          <input matInput type="number" [(ngModel)]="altura" />
+        </mat-form-field>
+        <mat-form-field class="example-form-field">
+          <mat-label>Peso</mat-label>
+          <input matInput type="number" [(ngModel)]="peso" />
+        </mat-form-field>
+        <button [disabled]="!altura || !peso" mat-raised-button (click)="calcular()">Calcular</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
